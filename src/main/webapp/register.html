@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Styles/login.css">
+    <link rel="script" href="Application.js">
+    <link rel="stylesheet" href="Styles/ApplicationContext.css">
+</head>
+<body class="application_body">
+<nav class="application_nav">
+    <ul>
+        <li>
+            <a href="home.html">Let's Code &lt;&sol;&gt;</a>
+        </li>
+        <li>
+            <a href="AboutUs.html">About US</a>
+        </li>
+        <li>
+            <a href="home.html">FeedBack</a>
+        </li>
+        <li id="nav-login" style="float: right">
+            <a href="login.html">Login</a>
+        </li>
+    </ul>
+</nav>
+<div id="signupdiv">
+    <form action="register" name="registerer" method="post">
+        <table class="loginTable">
+            <tr>
+                <td>
+                    <label for="username">User Name :</label>
+                </td>
+                <td>
+                    <input type="text" name="username" id="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Name :</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email Id :</label>
+                </td>
+                <td>
+                    <input type="text" name="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password : </label>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="repassword">Confirm Password : </label>
+                </td>
+                <td>
+                    <input type="password" name="repassword" id="repassword">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="padding-top: 20px">
+                    <input type="submit" name="signup" id="signup" value="Create Account">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="padding-top: 20px">
+                    <label style="color: black">Already Registered? <a href="login.html">Login</a></label>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+    isSessionThere();
+</script>
+</body>
+</html>

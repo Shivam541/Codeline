@@ -1,0 +1,15 @@
+.code_options {
+    font-size: 25px;
+    border-radius: 15px;
+    background-color: wheat;
+}
+
+.code_options:hover {
+    background-color: #37F0C8;
+}
+
+.code_options_combine {
+    background-color: black;
+    width: 85%;
+    padding: 2px;
+}

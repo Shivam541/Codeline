@@ -1,0 +1,67 @@
+.application_body {
+    background-image: linear-gradient(to right, lightcoral 30%, orange);
+}
+
+.application_nav ul {
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: wheat;
+}
+
+.application_nav li {
+    float: left;
+    font-size: 30px;
+}
+
+.application_nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+
+.application_nav li a:hover {
+    background-color: #37F0C8;
+}
+
+.application_nav li:last-child {
+    margin-right: 10%;
+    background-color: wheat;
+}
+.profile_logo{
+    width: 54px;
+    height: 54px;
+    float: right;
+}
+.pimg_logo{
+    border-radius: 40%;
+    width: 54px;
+    height: 54px;
+}
+
+.dropdown-options {
+    display: none;
+    left: 1060px;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-options a {
+    font-size: 100%;
+    float: none;
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.profile_logo:hover .dropdown-options{
+    display: block;
+}

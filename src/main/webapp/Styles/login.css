@@ -1,0 +1,77 @@
+.loginTable {
+    background-color: antiquewhite;
+    alignment: center;
+    margin: 50px;
+    border: yellow;
+    size: 18px;
+    padding: 15px;
+    border-spacing: 20px;
+    box-shadow: 3px 3px 20px 1px black;
+    border-radius: 20px;
+}
+
+input[type=submit] {
+    /*background-color: teal;*/
+    border: none;
+    font-size: 30px;
+    border-radius: 10px;
+    alignment: right;
+    mso-border-shadow: yes;
+    background-image: linear-gradient(to right, cadetblue, teal, darkslategray);
+}
+
+input[type=submit]:hover {
+    background-image: none;
+    background-color: lightseagreen;
+}
+
+input[type=password], input[type=text] {
+    width: 100%;
+    background-color: whitesmoke;
+    color: slateblue;
+    padding: 12px 10px;
+    /*border: 3px solid tan;*/
+    border: none;
+    /*border-bottom: 3px solid tan;*/
+    font-size: larger;
+    outline: none;
+    resize: none;
+}
+
+input[type=password]:focus, input[type=text]:focus {
+    border-bottom: 3px solid tan;
+}
+
+label {
+    color: seagreen;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logindiv {
+    width: 55%;
+    height: 78%;
+    float: left;
+}
+
+.coder_img {
+    width: 31%;
+    height: 93%;
+    float: left;
+    margin-top: 10%;
+}
+
+.coder_img img {
+    box-shadow: 3px 3px 20px 1px black;
+}
+
+.log_and_code {
+    background-color: black;
+    width: 98%;
+    height: 60%;
+}

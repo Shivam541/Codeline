@@ -1,0 +1,107 @@
+.profile_basic {
+    margin: 2%;
+    font-size: xxx-large;
+    background-color: #00917c;
+    box-shadow: 3px 3px 20px 1px black;
+    width: 40%;
+    height: 100%;
+    float: left;
+    color: #fde8cd;
+    padding: 1%;
+}
+
+.profile_basic label {
+    color: #025955;
+}
+
+.profile_body {
+    background-color: #433520;
+}
+
+#pie_and_recent {
+    width: 98%;
+    margin: 2%;
+    height: 40%;
+}
+
+#language_pie {
+    margin: 5% 5% 5% 8%;
+    /*display: block;*/
+    /*position: absolute;*/
+    width: 82%;
+    height: 82%;
+    box-shadow: 3px 3px 20px 1px black;
+    border-radius: 75%;
+    background-image: conic-gradient(
+            pink 50deg,
+            lightblue 0 235deg,
+            orange 0
+    );
+}
+
+#pie_container label {
+    font-size: larger;
+    margin: 10% 4% 4%;
+}
+
+#pie_container {
+    margin-left: 5%;
+    width: 21.5%;
+    height: 100%;
+    color: #fde8cd;
+    float: left;
+    background-color: #025955;
+    box-shadow: 3px 3px 20px 1px black;
+}
+
+#profile_pic_container {
+    width: 21%;
+    height: 100%;
+    margin: 2%;
+    float: left;
+    outline: none;
+    background-color: #433520;
+    /*box-shadow: 3px 3px 20px 1px black;*/
+}
+
+.recent_submissions {
+    margin-left: 8%;
+    width: 65%;
+    height: 98%;
+    float: left;
+}
+
+.recent_submissions label[id="recent_header"] {
+    color: #fde8cd;
+    font-size: 200%;
+}
+
+.profile_img {
+    margin: 2% 5% 5%;
+    box-shadow: 3px 3px 20px 1px black;
+    border-radius: 48%;
+    width: 90%;
+    height: 90%;
+}
+
+.user_info {
+    margin: 1%;
+    width: 98%;
+    height: 34%;
+}
+
+.code_status {
+    margin: 2%;
+    font-size: xxx-large;
+    box-shadow: 3px 3px 20px 1px black;
+    height: 100%;
+    padding: 15px;
+    width: 20%;
+    text-align: center;
+    float: right;
+    background-color: #025955;
+}
+
+.code_status label {
+    color: #00917c;
+}

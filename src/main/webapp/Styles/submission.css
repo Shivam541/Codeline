@@ -1,0 +1,39 @@
+tr {
+    border-spacing: 0;
+    /*font-size: xx-large;*/
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: lightgreen;
+}
+
+tr:nth-child(odd) {
+    background-color: #a6d6d6;
+}
+
+th {
+    background-color: black;
+    color: whitesmoke;
+    padding: 15px;
+    font-size: 150%;
+    border-spacing: 10px;
+}
+
+td {
+    padding: 15px;
+    font-weight: lighter;
+    font-size: 150%;
+}
+
+table {
+    /*margin-top: 44px;*/
+    /*margin-left: 250px;*/
+    box-shadow: 3px 3px 20px 1px black;
+}
+
+.list_head {
+    font-weight: bold;
+    font-size: x-large;
+    color: #ffddcc;
+}

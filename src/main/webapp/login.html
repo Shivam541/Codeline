@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Styles/login.css">
+    <link rel="stylesheet" href="Styles/ApplicationContext.css">
+    <meta charset="UTF-8">
+    <script src="Application.js"></script>
+    <title>Codeline Login</title>
+</head>
+<body class="application_body">
+<nav class="application_nav">
+    <ul>
+        <li>
+            <a href="home.html">Let's Code &lt;&sol;&gt;</a>
+        </li>
+        <li>
+            <a href="AboutUs.html">About US</a>
+        </li>
+        <li>
+            <a href="home.html">FeedBack</a>
+        </li>
+        <li id="nav-login" style="float: right">
+            <a href="#">Login</a>
+        </li>
+    </ul>
+</nav>
+<div class="log_and_code" style="background-color: black">
+    <div class="logindiv">
+        <form action="login" name="formLogin" method="post">
+            <table class="loginTable">
+                <tr>
+                    <td>
+                        <label for="username">Email Id :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" id="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password : </label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" style="padding-top: 20px">
+                        <input type="submit" name="login" id="login" value="Login">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" style="padding-top: 20px">
+                        <label style="color: black">Not Registered Yet? <a href="register.html">SignUp</a></label>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="coder_img">
+        <img src="Styles/5e064d895e608a03ac025aef2ae307b2.jpg" alt="Try Again">
+    </div>
+</div>
+<script>
+    isSessionThere();
+</script>
+</body>
+</html>

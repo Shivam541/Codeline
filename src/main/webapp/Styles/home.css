@@ -1,0 +1,46 @@
+.container_table {
+    width: 100%;
+    /*border-radius: 10px;*/
+    /*border: 2px solid blue;*/
+    border-spacing: 20px;
+    padding: 0 10px 10px;
+}
+
+a {
+    color: black;
+    text-underline: whitesmoke;
+    text-decoration: none;
+}
+
+label {
+    background-color: whitesmoke;
+    font-size: 40px;
+}
+
+.textcode {
+    resize: none;
+    height: 450px;
+    width: 650px;
+    color: green;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Calibri, serif;
+    background-color: whitesmoke;
+    outline: none;
+}
+
+.textcode:focus, .textio:focus {
+    box-shadow: 3px 3px 20px 1px black;
+}
+
+.textio {
+    resize: none;
+    height: 220px;
+    width: 420px;
+    color: green;
+    font-size: medium;
+    outline: none;
+    font-weight: bold;
+    font-family: Calibri, serif;
+    background-color: whitesmoke;
+}
