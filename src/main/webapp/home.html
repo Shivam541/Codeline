@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="Styles/home.css">
     <link rel="stylesheet" href="Styles/BasicButtons.css">
     <link rel="stylesheet" href="Styles/ApplicationContext.css">
-    <script src="Application.js"></script>
+    <script src="scriptsjs/Application.js"></script>
     <script src="scriptsjs/execution.js"></script>
+    <script src="scriptsjs/persistance.js"></script>
 </head>
 <body class="application_body">
 <nav class="application_nav">
@@ -17,9 +18,6 @@
         </li>
         <li>
             <a href="AboutUs.html">About US</a>
-        </li>
-        <li>
-            <a href="home.html">FeedBack</a>
         </li>
         <li id="nav-login" style="float: right">
             <a href="login.html">Login</a>
@@ -33,20 +31,19 @@
     <tr>
         <td rowspan="2">
             <div class="code_options_combine">
-                <button type="reset" name="reset" id="reset" class="code_options">reset</button> &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="reset" name="reset" id="reset" class="code_options" onclick="resetEditor()">reset</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <button name="execute" id="execute" class="code_options" onclick="loadXMLDoc()">execute</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                <button name="share" id="share" class="code_options">share</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                <button name="download" id="download" class="code_options">download</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button name="upload" id="upload" class="code_options" onclick="upload()">upload</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button name="download" id="download" class="code_options" onclick="downloadSame()">download</button>&nbsp;&nbsp;&nbsp;&nbsp;
                 <label for="lang"></label>
                 <select name="lang" id="lang" class="code_options">
                     <option name="java" id="java" value="java" selected="selected">Java</option>
                     <option name="python" id="python" value="python">Python</option>
-                    <option name="c++14" id="c++14" value="c++14">c++14</option>
-                    <option name="nodejs" id="nodejs" value="nodejs">node js</option>
                 </select>
             </div>
             <label for="code"></label>
-            <textarea name="code" id="code" class="textcode" onfocus="fillBox()">Code</textarea>
+            <textarea name="code" id="code" class="textcode" onclick="fillBox()">Code</textarea>
         </td>
         <td>
             <label for="input"></label>

@@ -1,4 +1,4 @@
-<%@ page import="java.sql.Connection" %><%--
+<%@ page import="java.sql.*" %><%--
   Created by IntelliJ IDEA.
   User: Shivam
   Date: 5/24/2021
@@ -6,13 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page session="false" %>
+<%@ page session="false" isELIgnored="false" %>
 <html>
 <head>
     <title>Profile page</title>
     <link rel="stylesheet" href="Styles/ApplicationContext.css">
     <link rel="stylesheet" href="Styles/profile.css">
-    <link rel="script" href="Application.js">
+    <link rel="script" href="scriptsjs/Application.js">
     <link rel="stylesheet" href="Styles/submission.css">
 </head>
 <body class="profile_body">
@@ -33,11 +33,25 @@
     </ul>
 </nav>
 <%
-    HttpSession session=request.getSession(false);
-    if(session==null){
-        response.sendError(404,"bhai login to karle");
+    HttpSession session = request.getSession(false);
+    if (session == null) {
+        response.sendError(404, "bhai login to karle");
+        return;
     }
-    Connection con= (Connection) application.getAttribute("connection");
+    Connection con = (Connection) application.getAttribute("connection");
+    Statement stmt = null;
+    int rowCount = 0;
+    try {
+        stmt = con.createStatement();
+        ResultSet sCount = stmt.executeQuery("select count(*) as sc from program" +
+                " where user='" + session.getAttribute("username") + "'");
+        sCount.next();
+        rowCount = sCount.getInt("sc");
+    } catch (SQLException throwables) {
+        System.out.println("first");
+        throwables.printStackTrace();
+        System.out.println(throwables);
+    }
 %>
 <div class="user_info">
     <div id="profile_pic_container">
@@ -46,8 +60,7 @@
     <div class="profile_basic">
         <label>Name :</label><%=session.getAttribute("name")%> <br>
         <label>Username :</label> <%=session.getAttribute("username")%> <br>
-        <label>Total Submissions : </label><%=session.getAttribute("10")%><br>
-        <label>Favourite Language : </label><%="Java"%><br>
+        <label>Total Submissions : </label><%=rowCount%><br>
     </div>
     <div class="code_status">
         <label>Success : </label><br>
@@ -64,7 +77,8 @@
         <div id="language_pie"></div>
     </div>
     <div class="recent_submissions">
-        <label id="recent_header">Recent programs by Shivam</label>
+        <label id="recent_header">Recent programs by <%=session.getAttribute("username")%>
+        </label>
         <table>
             <tr>
                 <th>
@@ -74,49 +88,41 @@
                     Language
                 </th>
                 <th>
-                    Status
-                </th>
-                <th>
                     Submission Date
                 </th>
                 <th>
                     Download
                 </th>
             </tr>
+            <%
+                try {
+                    ResultSet rs = stmt.executeQuery("select * from program where user='"
+                            + session.getAttribute("username") + "'");
+                    while (rs.next()) {
+            %>
             <tr>
                 <td>
-                    <label>#21083</label>
+                    <label>#<%=rs.getString("id")%>
+                    </label>
                 </td>
                 <td>
-                    <label>java</label>
+                    <label><%=rs.getString("lang")%>
+                    </label>
                 </td>
                 <td>
-                    <label>Success</label>
+                    <label><%=rs.getDate("submitted_on")%>
+                    </label>
                 </td>
                 <td>
-                    <label>23/02/2001</label>
-                </td>
-                <td>
-                    <button type="button" name="download" id="downlaod">Download</button>
+                    <a href="download?id=<%=rs.getString("id")%>">Download</a>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <label>#21083</label>
-                </td>
-                <td>
-                    <label>java</label>
-                </td>
-                <td>
-                    <label>Error</label>
-                </td>
-                <td>
-                    <label>23/02/2001</label>
-                </td>
-                <td>
-                    <button type="button" name="download" id="downlaod1">Download</button>
-                </td>
-            </tr>
+            <%
+                    }
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+            %>
         </table>
     </div>
 </div>

@@ -13,7 +13,7 @@ function replaceLoginWithProfile() {
         "        <img src=\"Styles/PngItem_877270.png\" alt=\"Try Again\" class=\"pimg_logo\" onclick='profileCLick()'>\n" +
         "<div class=\"dropdown-options\">\n" +
         "    <a href=\"\" onclick='profileCLick()'>Profile</a>\n" +
-        "    <a href=\"/Codeline_war_exploded/logout\" onclick='logoutCLick()'>Logout</a>\n" +
+        "    <a href=\"/Codeline_war_exploded/logout\">Logout</a>\n" +
         "    <a href=\"\" onclick='submissionCLick()'>My Submissions</a>\n" +
         "  </div>" +
         "</div>";

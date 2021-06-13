@@ -10,7 +10,7 @@
 <head>
     <title>User Submissions</title>
     <link rel="stylesheet" href="Styles/submission.css">
-    <link rel="script" href="Application.js">
+    <link rel="script" href="scriptsjs/Application.js">
     <link rel="stylesheet" href="Styles/ApplicationContext.css">
 </head>
 <body class="application_body">
@@ -22,14 +22,15 @@
         <li>
             <a href="AboutUs.html">About US</a>
         </li>
-        <li>
-            <a href="home.html">FeedBack</a>
-        </li>
         <li id="nav-login" style="float: right">
             <a href="login.html">Login</a>
         </li>
     </ul>
 </nav>
+<%
+    HttpSession sess = request.getSession(false);
+    if (sess == null)
+%>
 <p class="list_head">All programs by Shivam</p>
 <table style="margin: 5% 20% 10%">
     <tr>
@@ -40,10 +41,7 @@
             Language
         </th>
         <th>
-            Status
-        </th>
-        <th>
-            Submission Date
+            Submission Date & Time
         </th>
         <th>
             Download
@@ -55,9 +53,6 @@
         </td>
         <td>
             <label>java</label>
-        </td>
-        <td>
-            <label>Success</label>
         </td>
         <td>
             <label>23/02/2001</label>
@@ -72,9 +67,6 @@
         </td>
         <td>
             <label>java</label>
-        </td>
-        <td>
-            <label>Error</label>
         </td>
         <td>
             <label>23/02/2001</label>

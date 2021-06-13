@@ -18,8 +18,5 @@ public class ExecServlet extends HttpServlet {
         UserFileHandling.initFile(inputStream);
         ExecuteProgram.execute(response.getWriter());
         HttpSession session=request.getSession(false);
-        if(session!=null){
-            PersistCode.saveCode();
-        }
     }
 }

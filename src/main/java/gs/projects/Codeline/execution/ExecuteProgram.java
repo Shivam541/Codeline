@@ -20,11 +20,11 @@ public class ExecuteProgram {
                 String temp = err.readLine();
                 if (temp != null) {
                     result += temp;
-                    result += "&#13;&#10;";
+                    result += "\n";
                 } else break;
             }
             if (result.equals("")) {
-                out.println("compilation successful &#13;&#10;");
+                out.println("compilation successful \n");
             } else out.println(result);
             p = r.exec(javaPath + pathToFile);
             BufferedReader read = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -35,18 +35,17 @@ public class ExecuteProgram {
                 String temp = read.readLine();
                 if (temp != null) {
                     result1 += temp;
-                    result1 += "&#13;&#10;";
+                    result1 += "\n";
                 } else break;
             }
             while (true) {
                 String temp = err.readLine();
                 if (temp != null) {
                     result += temp;
-                    result += "&#13;&#10;";
+                    result += "\n";
                 } else break;
             }
             out.println(result1 + result);
-            System.out.println(result1 + "&#13;&#10;" + result);
         } catch (Exception e1) {
             System.out.println(e1);
             e1.printStackTrace(System.out);
